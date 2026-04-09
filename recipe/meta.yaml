@@ -1,5 +1,5 @@
 {% set name = "batchgeneratorsv2" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/batchgeneratorsv2-{{ version }}.tar.gz
-  sha256: 880359e331358606af74d5696fd3f488383ed5d3d0ddb0837c1361b317c3276c
+  sha256: 636215d7ce56c33033a86f97577cb0a97b1a5c6b245d4ae4597f664191281366
 
 build:
   noarch: python
