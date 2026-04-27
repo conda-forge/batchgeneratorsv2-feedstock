@@ -1,0 +1,47 @@
+schema_version: 1
+
+context:
+  name: batchgeneratorsv2
+  version: "0.3.2"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/batchgeneratorsv2-${{ version }}.tar.gz
+  sha256: 636215d7ce56c33033a86f97577cb0a97b1a5c6b245d4ae4597f664191281366
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - pytorch >=2.0.0
+    - numpy
+    - fft-conv-pytorch
+    - batchgenerators >=0.25
+
+tests:
+  - python:
+      imports:
+        - batchgeneratorsv2
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: Batchgenerators but better
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/MIC-DKFZ/batchgeneratorsv2
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
