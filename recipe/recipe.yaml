@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: batchgeneratorsv2
-  version: 0.3.3
+  version: "0.3.3"
 
 package:
   name: ${{ name|lower }}
@@ -27,6 +27,7 @@ requirements:
     - pytorch >=2.0.0
     - numpy
     - batchgenerators >=0.25
+
 tests:
   - python:
       imports:
