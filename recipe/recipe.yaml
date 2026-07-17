@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: batchgeneratorsv2
-  version: "0.3.4"
+  version: "0.3.5"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/batchgeneratorsv2-${{ version }}.tar.gz
-  sha256: 54b12eec1ed92f234f0e26c04b79e4f3670abb760c2603b7fc02c62c8e7b6e46
+  sha256: 7d75a421e7f18076308209f55af60582227ce061e03714a9e5a0c9dcddea3593
 
 build:
   number: 0
